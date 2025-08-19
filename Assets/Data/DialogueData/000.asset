@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69b6d0a4c744fc4e9153686ae69b58d, type: 3}
+  m_Name: 000
+  m_EditorClassIdentifier: 
+  dialogueID: 
+  isFinished: 1
+  data:
+  - isDialogueChoice: 0
+    speakerName: 000
+    speakerCharacter: {fileID: -5574162750134725227, guid: 700fdf30a269e5f4296f465038388df9, type: 3}
+    dialogueContent: 000
+    Choice: []

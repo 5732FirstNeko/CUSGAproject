@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be5ea7f2223739c49a94322b3a1b78c0, type: 3}
+  m_Name: Tachi
+  m_EditorClassIdentifier: 
+  WeaponAnimatorcontroller: {fileID: 0}
+  normalAttackTypes:
+  - <isShowHitBox>k__BackingField: 0
+    <animName>k__BackingField: 
+    <coolDown>k__BackingField: 0
+    <Hitbox>k__BackingField:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    <DetectedLayer>k__BackingField:
+      serializedVersion: 2
+      m_Bits: 0
+  <NormalAttackIntervalTime>k__BackingField: 0
+  <NormalAttackNumberName>k__BackingField: 
