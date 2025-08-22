@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5078d26dd6fd64d459700a2bfaf3231e, type: 3}
-  m_Name: TextRoom
+  m_Script: {fileID: 11500000, guid: feb7655c90ddebc4aa4d73f0cc9b843a, type: 3}
+  m_Name: newMapData
   m_EditorClassIdentifier: 
-  roomPrefab: {fileID: 0}
-  roomType: 0
-  size: {x: 0, y: 0}
-  entryPoints: []
-  entryDirections: 
-  gridPosition: {x: 0, y: 0}
-  instance: {fileID: 0}
+  roomNumber: 0
+  RewardDepth: 0
+  bossDepth: 0
+  generatType: 0
+  rooms: []

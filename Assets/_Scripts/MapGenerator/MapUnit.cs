@@ -4,19 +4,24 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+//半山腰太挤，你总得去山顶看看//
 [System.Serializable]
 public class MapUnit : MonoBehaviour
 {
     public Tilemap tilemap;
     public GameObject roomPrefab;
     public RoomType roomType;
+    public DoorData LeftDoor { get => doors.First(d => d.doorDirection == Direction.Left); }
+    public DoorData RightDoor { get => doors.First(d => d.doorDirection == Direction.Right); }
 
     public List<DoorData> doors;
 
     public HashSet<Vector2Int> GridPositions { get; private set; }
 
-    private void Awake()
+    private void OnEnable()
     {
+        tilemap = GetComponent<Tilemap>();
+
         if (tilemap != null)
         {
             GridPositions = GetTilemapGridPositions(tilemap);
@@ -79,13 +84,13 @@ public class MapUnit : MonoBehaviour
 [System.Serializable]
 public class DoorData
 {
-    public Transform position_X;
-    public Transform position_Y;
+    public Transform position_up;
+    public Transform position_down;
     public Direction doorDirection;
 
     public Vector3 GetMidPoint()
     {
-        return new Vector3((position_X.position.x + position_Y.position.x) / 2, (position_X.position.y + position_Y.position.y) / 2);
+        return new Vector3((position_up.position.x + position_down.position.x) / 2, (position_up.position.y + position_down.position.y) / 2);
     }
 }
 
@@ -96,6 +101,7 @@ public enum RoomType
     Reward,
     Boss,
     Shop,
+    End,
     Corridor
 }
 
@@ -104,4 +110,3 @@ public enum Direction
     Left,
     Right
 }
-

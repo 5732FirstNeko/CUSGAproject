@@ -479,7 +479,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.24
+  - time: 0.32
     functionName: SetCanExitAttack_Attack
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -487,14 +487,14 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.4
-    functionName: SetCanExitAttack_Move
+    functionName: ExitAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.4
-    functionName: ExitAttack
+    functionName: SetCanExitAttack_Move
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
