@@ -28,7 +28,7 @@ MonoBehaviour:
     <DetectedLayer>k__BackingField:
       serializedVersion: 2
       m_Bits: 128
-    <IsShowHitBox>k__BackingField: 1
+    <IsShowHitBox>k__BackingField: 0
   - <SkillName>k__BackingField: NormallAttack2
     <CoolDown>k__BackingField: 0
     <Hitbox>k__BackingField:
@@ -71,7 +71,7 @@ MonoBehaviour:
     <DetectedLayer>k__BackingField:
       serializedVersion: 2
       m_Bits: 128
-    <IsShowHitBox>k__BackingField: 0
+    <IsShowHitBox>k__BackingField: 1
   - <SkillName>k__BackingField: 
     <CoolDown>k__BackingField: 0
     <Hitbox>k__BackingField:

@@ -16,7 +16,7 @@ MonoBehaviour:
   isFinished: 0
   data:
   - isDialogueChoice: 0
-    speakerName: 0000
-    speakerCharacter: {fileID: -5574162750134725227, guid: 700fdf30a269e5f4296f465038388df9, type: 3}
-    dialogueContent: 0000
+    speakerName: 
+    speakerCharacter: {fileID: 0}
+    dialogueContent: 
     Choice: []

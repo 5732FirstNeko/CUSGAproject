@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,9 +31,11 @@ public class DamageComponent : CoreComponent
         enity.KnockBackStateEnter(new KnockBackStateData(time, new Vector2(x, y)));
     }
 
-    public void CompulsionDamage(Vector3 startPosition,Vector3 endfPosition,float height,float time_Heighest,float time_EndPoint)
+    public void CompulsionDamage(Func<float, float> xCustomCurve, Func<float, float> yCustomCurve, 
+        Vector3 startPosition,Vector3 endfPosition,float height,float time_MidPoint,float time_EndPoint)
     {
-        CompulsionStateData stateData = new CompulsionStateData(startPosition, endfPosition, height, time_Heighest, time_EndPoint);
+        CompulsionStateData stateData = new CompulsionStateData(xCustomCurve,yCustomCurve,
+            startPosition, endfPosition, height, time_MidPoint, time_EndPoint);
 
         enity.CompulsionStateEnter(stateData);
     }

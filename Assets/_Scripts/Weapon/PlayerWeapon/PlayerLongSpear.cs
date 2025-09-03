@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using UnityEditor;
 using UnityEngine;
 
 //半山腰太挤，你总得去山顶看看//
@@ -12,8 +14,8 @@ public class PlayerLongSpear : PlayerWeapon
     [SerializeField] private Transform Waltzsticks_StartPosition;
     [SerializeField] private Transform Waltzsticks_EndPosition;
     [SerializeField] private float height;
-    [SerializeField] private float time_Heighestpoint;
-    [SerializeField] private float time_Endpoint;
+    [SerializeField] private float time_MidPoint;
+    [SerializeField] private float time_EndPoint;
     #endregion
 
     public override void EnterAttack(AttackInputTypes attackInput)
@@ -114,8 +116,11 @@ public class PlayerLongSpear : PlayerWeapon
             DamageComponent damageComponentTemp = collider.GetComponent<Enity>().core.GetCoreComponent<DamageComponent>();
 
             damageComponentTemp.NormallDamage(statsComponent.AttackDamage, moveComponent.FacingDirection);
-            damageComponentTemp.CompulsionDamage(Waltzsticks_StartPosition.position,Waltzsticks_EndPosition.position,
-                height,time_Heighestpoint,time_Endpoint);
+            damageComponentTemp.CompulsionDamage(
+                progess => Mathf.Lerp(Waltzsticks_StartPosition.position.x,Waltzsticks_EndPosition.position.x,progess),
+                progess => Mathf.Sin(progess * Mathf.PI) * height,
+                Waltzsticks_StartPosition.position,Waltzsticks_EndPosition.position,height,
+                time_MidPoint,time_EndPoint);
         }
     }
 

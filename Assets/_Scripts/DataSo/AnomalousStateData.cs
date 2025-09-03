@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,19 +22,31 @@ public class KnockBackStateData : AnomalousStateData
 
 public class CompulsionStateData : AnomalousStateData
 {
-    public CompulsionStateData(Vector3 startPosition,Vector3 endPosition,float height,float trowTime_Heigestpoint,float trowTime_Endpoint) 
+    public CompulsionStateData(Func<float,float> xCustomCurve, Func<float,float> yCustomCurve,
+        Vector3 startPosition,Vector3 endPosition,
+        float height,float time_MidPoint,float time_EndPoint) 
     {
-        this.startPostion = startPosition;
-        this.endPostion = endPosition;
+        this.xCustomCurve = xCustomCurve;
+        this.yCustomCurve = yCustomCurve;
+        this.startPosition = startPosition;
+        this.endPosition = endPosition;
         this.height = height;
-        this.trowTime_Heigestpoint = trowTime_Heigestpoint;
-        this.trowTime_Endpoint = trowTime_Endpoint;
+        this.time_MidPoint = time_MidPoint;
+        this.time_EndPoint = time_EndPoint;
     }
 
-    public Vector3 startPostion;
-    public Vector3 endPostion;
+    public Func<float, float> xCustomCurve;
+    public Func<float, float> yCustomCurve;
+
+    public Vector3 startPosition;
+    public Vector3 endPosition;
 
     public float height;
-    public float trowTime_Heigestpoint;
-    public float trowTime_Endpoint;
+    public float time_MidPoint;//开始至到达中间值的时间
+    public float time_EndPoint;//中间值至到达结束时的时间
+}
+
+public class LevitateStateData : AnomalousStateData
+{
+    public float levitateTime;
 }

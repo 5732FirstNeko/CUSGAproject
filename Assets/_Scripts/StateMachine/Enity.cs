@@ -39,7 +39,14 @@ public abstract class Enity : MonoBehaviour,IAnomalousStateEnter
         stateMachine.currentState.PhysicsUpdate();
     }
 
+    //TODO : AnomalousStateEnter Function realize
+
     public abstract void KnockBackStateEnter(KnockBackStateData anomalousData);
 
     public abstract void CompulsionStateEnter(CompulsionStateData anomalousData);
+
+    public void LevitateStateEnter(LevitateStateData anomalousData)
+    {
+        
+    }
 }

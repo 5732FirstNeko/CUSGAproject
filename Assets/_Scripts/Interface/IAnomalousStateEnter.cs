@@ -8,4 +8,6 @@ public interface IAnomalousStateEnter
     public abstract void KnockBackStateEnter(KnockBackStateData anomalousData);
 
     public abstract void CompulsionStateEnter(CompulsionStateData anomalousData);
+
+    public abstract void LevitateStateEnter(LevitateStateData anomalousData);
 }
